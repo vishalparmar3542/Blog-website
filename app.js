@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const mongoose = require("mongoose");
-const dburl = process.env.db;
+const dburl = process.env.DATABASE;
 console.log(dburl);
 mongoose.connect(dburl, { useNewUrlParser: true, }).then(() => {
   console.log("connected");

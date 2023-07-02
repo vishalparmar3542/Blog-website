@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+<h1>HOME</h1>
+<p><%=homeContent %></p>
+
+<%posts.forEach((post)=>{%>
+
+<div>
+   <a href="/posts/<%=post._id%>" style="text-decoration: none;color: black;"  >
+ 
+      <h3><%=post.title%></h3>
+    <p class="text-overflow-ellipses"><%=post.content%></p>
+    <span style="color:#1abc9c;" class="read">Read More</span>
+  </a>
+</div>
+<%});%>
+<br />
+<%- include("partials/footer") -%>
